@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { Container } from './styles';
 
-export default function Footer({onToggleTheme}) {
+import { ThemeContextAPI } from '../../context/themeContext';
+
+export default function Footer() {
+  const { onToggleTheme } = useContext(ThemeContextAPI);
+
   return (
     <Container>
       <span>JStack's Blog. Todos os direitos reservados.</span>
